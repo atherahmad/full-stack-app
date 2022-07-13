@@ -1,7 +1,8 @@
 import express from "express";
-import { testController } from "../controllers/test.js";
-const route = express.Router();
+import { storeData, testController } from "../controllers/test.js";
+const   router = express.Router();
 
-route.get("/",testController)
+router.get("/dashboard",testController);
+router.post("/newuser", storeData)
 
-export default route;
+export default router;
